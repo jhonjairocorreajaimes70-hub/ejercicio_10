@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box; /* con border-box hacemos que los bordes y paddings se incluyan dentro del tamaño total de nuestro elemento */
+    margin: 0; /* eliminamos las margenes predeterminadas de los navegadores */
+    padding: 0; /* eliminamos los paddings predeterminados de los navegadores */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 12px;
+    color: #111111;
+}
+
+.caja-principal {
+    border: 2px solid #222222;
+    border-radius: 18px; /* redondeamos los bordes de la tarjeta principal */
+    padding: 24px 28px;
+    max-width: 1000px; /* designamos el ancho maximo del contenedor principal */
+    margin: 0 auto; /* centramos de forma automática el contenedor en la pantalla */
+}
+
+.menu-pestañas {
+    display: flex; /* activamos el flexbox para ordenar los botones en fila */
+    gap: 20px; /* dejamos un espacio de 20px entre cada botón */
+    flex-wrap: wrap; /* permite que bajen de línea si la pantalla es muy pequeña */
+    border-bottom: 1px solid #dddddd;
+}
+
+.mi-boton {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 10px 12px;
+    font-size: 18px;
+    color: #050505;
+    cursor: pointer; /* cambia el cursor a manito para indicar interactividad */
+}
+
+.mi-boton.activa {
+    color: #000000;
+    border-bottom-color: #010101;
+}
+
+.texto-info {
+    font-size: 19px;
+    line-height: 1.5;
+    margin: 24px 0 18px;
+}
+
+.bloque-contenido {
+    display: none; /* ocultamos por defecto todos los bloques de contenido */
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 150px;
+    border-radius: 20px; /* redondeamos los bordes */
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* Clase que se activa con JavaScript para mostrar únicamente el bloque seleccionado */
+.bloque-contenido.activa {
+    display: flex; /* lo convertimos en flex solo cuando está activo para centrar el texto */
+    justify-content: center; /* centramos el contenido horizontalmente */
+    align-items: center; /* centramos el contenido verticalmente */
+}
+
+.texto-pie {
+    font-size: 19px;
+    margin-top: 28px;
+}
+
+/* Media query para hacer la interfaz responsiva en celulares */
+@media (max-width: 600px) {
+    .caja-principal {
+        padding: 16px;
+    }
+
+    .menu-pestañas {
+        gap: 4px;
+    }
+
+    .mi-boton {
+        font-size: 14px;
+        padding: 10px 6px;
+    }
+
+    .texto-info,
+    .texto-pie {
+        font-size: 16px;
+    }
+}

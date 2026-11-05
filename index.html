@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Proyecto 10 - Pestañas</title> 
+    <link rel="stylesheet" href="css/styles.css"> 
+    <script src="script.js" defer></script> 
+</head> 
+<body> 
+    <!-- Contenedor principal que envuelve todo el diseño -->
+    <div class="caja-principal">
+        <!-- Barra superior que agrupa todos los botones de las pestañas -->
+        <div class="menu-pestañas">
+            <button class="mi-boton activa" data-pestana="1">
+                Sección Uno
+            </button>
+            <button class="mi-boton" data-pestana="2">
+                Sección Dos
+            </button>
+            <button class="mi-boton" data-pestana="3">
+                Sección Tres
+            </button>
+            <button class="mi-boton" data-pestana="4">
+                Sección Cuatro
+            </button>
+        </div>
+        <!-- Texto descriptivo introductorio -->
+        <p class="texto-info">
+            Haz clic en cada botón para ver su respectiva información.
+            Solo se mostrará una sección a la vez en la pantalla.
+        </p>
+        <!-- Contenedor general que agrupa los bloques de contenido -->
+        <div class="caja-contenidos">
+            <div class="bloque-contenido activa" data-contenido="1">
+                Información detallada de la primera sección.
+            </div>
+            <div class="bloque-contenido" data-contenido="2">
+                Información detallada de la segunda sección.
+            </div>
+            <div class="bloque-contenido" data-contenido="3">
+                Información detallada de la tercera sección.
+            </div>
+            <div class="bloque-contenido" data-contenido="4">
+                Información detallada de la cuarta sección.
+            </div>
+        </div>
+
+        <!-- Texto inferior de cierre -->
+        <p class="texto-pie">
+            Cada sección cuenta con su propio contenido independiente.
+        </p>
+
+    </div> <!-- Fin del contenedor principal -->
+
+</body>
+</html>
